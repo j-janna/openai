@@ -18,7 +18,12 @@ async function connectDB(uri) {
     // 注意：在较新版本的 mongoose 中，不再需要也不支持传入
     // `useNewUrlParser` 和 `useUnifiedTopology` 等已废弃选项，
     // 因此直接传入连接字符串即可。
-    await mongoose.connect(uri);
+    const promise = mongoose.connect(uri, {
+      serverSelectionTimeoutMS: 5000, // 5 秒超时
+      socketTimeoutMS: 45000,
+    });
+    
+    await promise;
 
     console.log('MongoDB connected');
   } catch (error) {
