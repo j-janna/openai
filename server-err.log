@@ -1,0 +1,40 @@
+MongoDB connection error: MongooseServerSelectionError: getaddrinfo ENOTFOUND test-db-mongodb.ns-s86y0ylw.svc
+    at _handleConnectionErrors (C:\Users\28942\Desktop\新建文件夹\node_modules\mongoose\lib\connection.js:1169:11)
+    at NativeConnection.openUri (C:\Users\28942\Desktop\新建文件夹\node_modules\mongoose\lib\connection.js:1100:11)
+    at async connectDB (C:\Users\28942\Desktop\新建文件夹\src\config\db.js:21:5)
+    at async start (C:\Users\28942\Desktop\新建文件夹\src\index.js:83:5) {
+  errorLabelSet: Set(0) {},
+  reason: TopologyDescription {
+    type: 'Unknown',
+    servers: Map(1) {
+      'test-db-mongodb.ns-s86y0ylw.svc:27017' => [ServerDescription]
+    },
+    stale: false,
+    compatible: true,
+    heartbeatFrequencyMS: 10000,
+    localThresholdMS: 15,
+    setName: null,
+    maxElectionId: null,
+    maxSetVersion: null,
+    commonWireVersion: 0,
+    logicalSessionTimeoutMinutes: null
+  },
+  code: undefined,
+  cause: TopologyDescription {
+    type: 'Unknown',
+    servers: Map(1) {
+      'test-db-mongodb.ns-s86y0ylw.svc:27017' => [ServerDescription]
+    },
+    stale: false,
+    compatible: true,
+    heartbeatFrequencyMS: 10000,
+    localThresholdMS: 15,
+    setName: null,
+    maxElectionId: null,
+    maxSetVersion: null,
+    commonWireVersion: 0,
+    logicalSessionTimeoutMinutes: null
+  }
+}
+外部 MongoDB 连接失败，正在回退到内存 MongoDB（mongodb-memory-server）: getaddrinfo ENOTFOUND test-db-mongodb.ns-s86y0ylw.svc
+^C^C

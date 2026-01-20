@@ -1,0 +1,23 @@
+{
+  "name": "todo-backend",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "node test/test-api.js",
+    "build:frontend": "npm --prefix frontend-vite run build",
+    "docker:build": "docker build -t todo-backend:latest ."
+    ,"test:e2e": "npx playwright test"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1",
+    "mongoose": "^9.1.4",
+    "morgan": "^1.10.1"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.57.0",
+    "mongodb-memory-server": "^11.0.1",
+    "node-fetch": "^2.7.0"
+  }
+}

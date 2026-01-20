@@ -1,0 +1,67 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  backend-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+      - name: Install backend deps
+        run: |
+          npm config set registry https://registry.npmmirror.com
+          npm install
+      - name: Run backend tests
+        run: npm test
+
+  frontend-build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+      - name: Build frontend-vite
+        working-directory: frontend-vite
+        run: |
+          npm config set registry https://registry.npmmirror.com
+          npm install
+          npm run build
+      - name: Install Playwright browsers
+        run: |
+          npm install --prefix .. --no-save @playwright/test
+          npx playwright install --with-deps
+
+  e2e:
+    runs-on: ubuntu-latest
+    needs: [backend-test, frontend-build]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+      - name: Install dependencies
+        run: |
+          npm config set registry https://registry.npmmirror.com
+          npm install
+          npm install --no-save @playwright/test
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps
+      - name: Start backend
+        run: |
+          npm run build:frontend
+          nohup npm start &
+      - name: Wait for server
+        run: npx wait-on http://localhost:3000 && sleep 2
+      - name: Run E2E tests
+        run: npm run test:e2e

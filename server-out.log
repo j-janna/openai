@@ -1,0 +1,56 @@
+
+> todo-backend@1.0.0 start
+> node src/index.js
+
+[dotenv@17.2.3] injecting env (0) from .env -- tip: ⚙️  suppress all logs with { quiet: true }
+MongoDB connected
+Connected to in-memory MongoDB for fallback
+Server running on port 3000
+[0mGET /api/get-todo [32m200[0m 38.561 ms - 2[0m
+[2026-01-20T05:33:20.768Z] GET /api/get-todo 200 - 49ms
+[0mGET /api/get-todo [32m200[0m 6.800 ms - 2[0m
+[2026-01-20T05:34:37.186Z] GET /api/get-todo 200 - 8ms
+[0mPOST /api/add-todo [32m201[0m 35.572 ms - 136[0m
+[2026-01-20T05:36:05.411Z] POST /api/add-todo 201 - 39ms
+[0mPOST /api/add-todo [32m201[0m 7.209 ms - 123[0m
+[2026-01-20T05:36:15.599Z] POST /api/add-todo 201 - 11ms
+[0mPOST /api/add-todo [32m201[0m 7.313 ms - 130[0m
+[2026-01-20T05:36:23.986Z] POST /api/add-todo 201 - 11ms
+[0mPOST /api/add-todo [32m201[0m 6.587 ms - 128[0m
+[2026-01-20T05:36:33.240Z] POST /api/add-todo 201 - 9ms
+[0mGET /api/get-todo [32m200[0m 17.837 ms - 522[0m
+[2026-01-20T05:37:16.488Z] GET /api/get-todo 200 - 23ms
+[0mGET / [32m200[0m 55.026 ms - 478[0m
+[2026-01-20T05:44:39.857Z] GET / 200 - 61ms
+[0mGET /assets/index-DiBQnu09.css [32m200[0m 27.604 ms - 3161[0m
+[2026-01-20T05:44:39.905Z] GET /assets/index-DiBQnu09.css 200 - 30ms
+[0mGET /assets/index-KugSzZkL.js [32m200[0m 117.003 ms - 66350[0m
+[2026-01-20T05:44:39.993Z] GET /assets/index-KugSzZkL.js 200 - 124ms
+[0mGET /api/get-todo [32m200[0m 8.512 ms - 522[0m
+[2026-01-20T05:44:40.051Z] GET /api/get-todo 200 - 12ms
+[0mGET / [32m200[0m 2.534 ms - 478[0m
+[2026-01-20T05:46:44.430Z] GET / 200 - 6ms
+[0mGET /assets/index-DiBQnu09.css [32m200[0m 6.483 ms - 3161[0m
+[2026-01-20T05:46:44.455Z] GET /assets/index-DiBQnu09.css 200 - 10ms
+[0mGET /assets/index-KugSzZkL.js [32m200[0m 6.861 ms - 66350[0m
+[2026-01-20T05:46:44.459Z] GET /assets/index-KugSzZkL.js 200 - 17ms
+[0mGET /api/get-todo [32m200[0m 10.602 ms - 522[0m
+[2026-01-20T05:46:44.518Z] GET /api/get-todo 200 - 13ms
+[0mGET / [32m200[0m 2.939 ms - 478[0m
+[2026-01-20T05:48:24.835Z] GET / 200 - 7ms
+[0mGET /assets/index-DiBQnu09.css [32m200[0m 5.727 ms - 3161[0m
+[2026-01-20T05:48:24.854Z] GET /assets/index-DiBQnu09.css 200 - 7ms
+[0mGET /assets/index-KugSzZkL.js [32m200[0m 7.797 ms - 66350[0m
+[2026-01-20T05:48:24.858Z] GET /assets/index-KugSzZkL.js 200 - 15ms
+[0mGET /api/get-todo [32m200[0m 10.116 ms - 522[0m
+[2026-01-20T05:48:24.913Z] GET /api/get-todo 200 - 16ms
+[0mGET / [32m200[0m 3.117 ms - 478[0m
+[2026-01-20T05:48:40.596Z] GET / 200 - 6ms
+[0mGET /assets/index-DiBQnu09.css [32m200[0m 5.034 ms - 3161[0m
+[2026-01-20T05:48:40.614Z] GET /assets/index-DiBQnu09.css 200 - 7ms
+[0mGET /assets/index-KugSzZkL.js [32m200[0m 5.765 ms - 66350[0m
+[2026-01-20T05:48:40.619Z] GET /assets/index-KugSzZkL.js 200 - 14ms
+[0mGET /api/get-todo [32m200[0m 7.781 ms - 522[0m
+[2026-01-20T05:48:40.670Z] GET /api/get-todo 200 - 10ms
+[0mGET / [32m200[0m 52.177 ms - 478[0m
+[2026-01-20T05:53:19.202Z] GET / 200 - 57ms
